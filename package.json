@@ -1,0 +1,72 @@
+{
+  "name": "youtube-bot",
+  "version": "1.0.0",
+  "description": "An Electron application with React",
+  "main": "./dist/main/index.js",
+  "author": "example.com",
+  "homepage": "https://electron-vite.org",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "start": "electron-forge start",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux",
+    "ulixee-start": "@ulixee/cloud start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^3.0.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.0",
+    "@mui/x-date-pickers": "^7.17.0",
+    "@ulixee/cloud": "^2.0.0-alpha.29",
+    "@ulixee/hero-playground": "^2.0.0-alpha.29",
+    "@ulixee/unblocked-agent-mitm-socket": "^2.0.0-alpha.29",
+    "autoprefixer": "^10.4.20",
+    "electron-squirrel-startup": "^1.0.1",
+    "material-react-table": "^3.0.1",
+    "papaparse": "^5.4.1",
+    "path-browserify": "^1.0.1",
+    "playwright": "^1.47.1",
+    "postcss": "^8.4.47",
+    "react-icons": "^5.3.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.5.0",
+    "@electron-forge/maker-deb": "^7.5.0",
+    "@electron-forge/maker-rpm": "^7.5.0",
+    "@electron-forge/maker-squirrel": "^7.5.0",
+    "@electron-forge/maker-zip": "^7.5.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.5.0",
+    "@electron-forge/plugin-fuses": "^7.5.0",
+    "@electron-toolkit/eslint-config": "^1.0.2",
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@electron/fuses": "^1.8.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "electron": "^31.0.2",
+    "electron-vite": "^2.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "prettier": "^3.3.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.12",
+    "vite": "^5.3.1"
+  },
+  "build": {
+    "files": [
+      "dist/**/*",
+      "src/**/*",
+      "src/main/**/*"
+    ]
+  }
+}
